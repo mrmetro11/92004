@@ -40,3 +40,4 @@ for question in questions:
             print("INCORRECT!")
             print(f"{awnsers[question_num]} is the correct awnser")
         question_num += 1
+        print(hello)
