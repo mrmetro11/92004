@@ -24,8 +24,9 @@ options =(("A. Auckland", "B. Rotorua", "C. Christchurch"),
                    ("A. Heat", "B. Warriors", "C. City"),
                    ("A. 2015", "B. 2013", "C. 2012"))
 #list of the correst answers
-answers = ("B", "C", "A", "A", "C", "A", "B", "A", "C", "B")
+answers = ["B", "C", "A", "A", "C", "A", "B", "A", "C", "B"]
 guesses = []
+valid = ["A", "B", "C"]
 score = 0
 question_num = 0
 
@@ -34,12 +35,9 @@ for question in questions:
     print(question)
     for option in options[question_num]:
         print(option)
-    
     guess = input("Enter (A, B, C): ").upper()
-    alphatest = guess.isalpha()
-    if alphatest == False:
-        print("Invalid input please enter only A, B or C!!!!!!!")
-        
+    while guess is not valid:
+        print("Invalid input please enter only A, B or C!!")       
     guesses.append(guess)
     if guess == answers[question_num]:
         score += 1
@@ -64,4 +62,4 @@ for guess in guesses:
 print()
 #turning the score into a percentage
 score = int(score / len(questions) * 100)
-print(f"Your score is: {score}%")
+print(f"Your score is: {score}%")   
