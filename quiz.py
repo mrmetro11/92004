@@ -36,8 +36,13 @@ for question in questions:
     for option in options[question_num]:
         print(option)
     guess = input("Enter (A, B, C): ").upper()
-    while guess is not valid:
-        print("Invalid input please enter only A, B or C!!")       
+    while guess not in valid:
+        print("Invalid input please enter only A, B or C!!")
+        print("----------------------")
+        print(question)
+        for option in options[question_num]:
+            print(option)
+        guess = input("Enter (A, B, C): ").upper()
     guesses.append(guess)
     if guess == answers[question_num]:
         score += 1
@@ -46,12 +51,12 @@ for question in questions:
         print("INCORRECT!")
         print(f"{answers[question_num]} is the correct answer")
     question_num += 1
-
+    
 print("----------------------")
 print("       RESULTS       ")
 print("----------------------") 
 
-print("correct answers: ", end="")
+print("orrect answers: ", end="")
 for answer in answers:
     print(answer, end=" ")
 print()
