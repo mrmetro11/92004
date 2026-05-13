@@ -46,7 +46,7 @@ for question in questions:
     guesses.append(guess)
     if guess == answers[question_num]:
         score += 1
-        print("CORRECT!")
+        print("CORRECT!") 
     else:
         print("INCORRECT!")
         print(f"{answers[question_num]} is the correct answer")
@@ -56,7 +56,7 @@ print("----------------------")
 print("       RESULTS       ")
 print("----------------------") 
 
-print("orrect answers: ", end="")
+print("Correct answers: ", end="")
 for answer in answers:
     print(answer, end=" ")
 print()
