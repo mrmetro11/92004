@@ -26,10 +26,10 @@ options =(("A. Auckland", "B. Rotorua", "C. Christchurch"),
 #list of the correst answers
 answers = ["B", "C", "A", "A", "C", "A", "B", "A", "C", "B"]
 guesses = []
-valid = ["A", "B", "C"]
+valid = ["A", "B", "C"] 
 score = 0
 question_num = 0
-
+#this is the code section for the valid and invalid inputs
 for question in questions:
     print("----------------------")
     print(question)
@@ -51,7 +51,7 @@ for question in questions:
         print("INCORRECT!")
         print(f"{answers[question_num]} is the correct answer")
     question_num += 1
-    
+#this code is for the end results and caluclating your percentage of your correct answers
 print("----------------------")
 print("       RESULTS       ")
 print("----------------------") 
@@ -67,4 +67,4 @@ for guess in guesses:
 print()
 #turning the score into a percentage
 score = int(score / len(questions) * 100)
-print(f"Your score is: {score}%")   
+print(f"Your score is: {score}%") 
